@@ -1,0 +1,149 @@
+.research-layout {
+  display: grid;
+  grid-template-columns: 380px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  padding: 40px 0;
+}
+
+.side-nav {
+  position: sticky;
+  top: 83.5px;
+  width: 380px;
+  padding: 0;
+  background: transparent;
+}
+
+.side-nav a,
+.project-toggle {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 0;
+  padding: 9px 10px 9px 16px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+}
+
+.side-nav a:hover,
+.side-nav a:focus-visible,
+.project-toggle:hover,
+.project-toggle:focus-visible {
+  color: var(--accent-strong);
+  background: transparent;
+  box-shadow: none;
+}
+
+.side-nav a:focus-visible,
+.project-toggle:focus-visible {
+  outline: 3px solid rgba(31, 138, 112, 0.35);
+  outline-offset: 2px;
+}
+
+.side-nav a[aria-current="page"],
+.project-toggle[aria-pressed="true"] {
+  color: var(--accent-strong);
+  background: transparent;
+  box-shadow: none;
+  font-weight: 600;
+}
+
+.side-nav a[aria-current="page"]::before,
+.project-toggle[aria-pressed="true"]::before {
+  position: absolute;
+  top: 9px;
+  bottom: 9px;
+  left: 0;
+  width: 3px;
+  border-radius: 999px;
+  background: var(--accent);
+  content: "";
+}
+
+.side-group {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.side-group p {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.paper-icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex: 0 0 1.1em;
+  margin-top: 0.08em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.research-content {
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.project-viewer {
+  overflow: hidden;
+  padding: 0;
+}
+
+@media (max-width: 840px) {
+  .research-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 28px 0;
+  }
+
+  .side-nav {
+    position: static;
+    width: 100%;
+  }
+
+  .research-content {
+    padding: 28px;
+  }
+
+  .project-viewer {
+    padding: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .research-content {
+    padding: 22px;
+  }
+
+  .project-viewer {
+    padding: 0;
+  }
+}

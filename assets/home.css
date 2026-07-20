@@ -1,0 +1,254 @@
+.intro-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 440px;
+  gap: 78px;
+  align-items: center;
+  min-height: calc(100svh - 67.5px);
+  padding: 40px 0;
+}
+
+.intro-copy {
+  max-width: 820px;
+}
+
+#intro-title {
+  margin-bottom: 24px;
+  font-size: clamp(3.65rem, 5.7vw, 5.9rem);
+  line-height: 1.04;
+}
+
+.intro-copy .lead::before {
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-bottom: 24px;
+  background: var(--accent);
+  content: "";
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.action-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 64px;
+  min-width: 186px;
+  padding: 0 30px;
+  border: 1px solid rgba(7, 18, 33, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--ink);
+  font-size: 1.12rem;
+  font-weight: 600;
+  box-shadow: 0 16px 36px rgba(7, 18, 33, 0.08);
+}
+
+.action-row a:first-child {
+  color: white;
+  border-color: transparent;
+  background: var(--button-gradient);
+  box-shadow: var(--button-shadow);
+}
+
+.action-row a:first-child::after {
+  content: "\2192";
+}
+
+.action-row a:nth-child(2)::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--accent);
+  border-radius: 3px;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  content: "in";
+}
+
+.profile-summary {
+  align-self: center;
+  padding: 22px;
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.7;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.profile-summary dl {
+  display: grid;
+  gap: 0;
+  margin: 20px 0 0;
+}
+
+.profile-summary div {
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+
+.profile-summary div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+dt {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+dd {
+  margin: 6px 0 0;
+  color: var(--ink);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.42;
+}
+
+.content-band,
+.education-section {
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+}
+
+.timeline,
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.timeline-item,
+.education-grid article {
+  padding: 24px;
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.timeline-item h3,
+.education-grid h3 {
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.item-head {
+  position: relative;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 14px;
+  align-items: stretch;
+  margin-bottom: 12px;
+}
+
+.company-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58px;
+  height: 100%;
+  min-height: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  object-fit: cover;
+}
+
+.item-head > div {
+  display: flex;
+  grid-column: 2;
+  min-height: 58px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timeline-item p:last-child,
+.education-grid p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.timeline-kicker {
+  margin-bottom: 3px;
+  color: var(--accent-strong);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.item-date {
+  display: inline;
+  color: inherit;
+  font: inherit;
+  font-weight: inherit;
+}
+
+.education-logo {
+  object-fit: contain;
+  padding: 5px;
+}
+
+@media (max-width: 840px) {
+  .content-band,
+  .education-section {
+    padding: 28px 0;
+  }
+
+  .intro-section,
+  .timeline,
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-section {
+    gap: 32px;
+    min-height: 0;
+    padding: 28px 0;
+  }
+
+  #intro-title {
+    font-size: 3.8rem;
+  }
+
+  .profile-summary {
+    max-width: 480px;
+  }
+}
+
+@media (max-width: 560px) {
+  .timeline-item,
+  .education-grid article {
+    padding: 20px;
+  }
+
+  #intro-title {
+    font-size: 2.85rem;
+  }
+
+  .action-row {
+    gap: 12px;
+  }
+
+  .action-row a {
+    width: 100%;
+  }
+}

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research | Ulysse Mizrahi</title>
+    <meta
+      name="description"
+      content="Research papers and project links for Ulysse Mizrahi."
+    />
+    <link rel="icon" href="../assets/profile.jpg" type="image/jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link rel="stylesheet" href="../assets/research.css?v=6" />
+    <link rel="stylesheet" href="../assets/pdf-viewer.css?v=3" />
+    <script defer src="../assets/pdf-viewer.js?v=4"></script>
+  </head>
+  <body class="research-page">
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-index" viewBox="0 0 24 24">
+        <path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01" />
+      </symbol>
+      <symbol id="icon-video" viewBox="0 0 24 24">
+        <path d="M4 7h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z" />
+        <path d="m16 10 5-3v10l-5-3" />
+      </symbol>
+      <symbol id="icon-image" viewBox="0 0 24 24">
+        <path d="M4 5h16v14H4z" />
+        <path d="m4 16 5-5 4 4 2-2 5 5" />
+        <path d="M15 9h.01" />
+      </symbol>
+      <symbol id="icon-mesh" viewBox="0 0 24 24">
+        <path d="M4 8c4-4 8 4 12 0 2-2 3-2 4-2" />
+        <path d="M4 16c4-4 8 4 12 0 2-2 3-2 4-2" />
+        <path d="M8 5v14M16 5v14" />
+      </symbol>
+      <symbol id="icon-shirt" viewBox="0 0 24 24">
+        <path d="M9 4h6l2 2 3 1-2 5-2-1v9H8v-9l-2 1-2-5 3-1Z" />
+        <path d="M9 4c.7 1.3 1.7 2 3 2s2.3-.7 3-2" />
+      </symbol>
+    </svg>
+    <header class="site-header">
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a class="identity-link" href="../index.html" aria-label="Ulysse Mizrahi home">
+          <img class="nav-photo" src="../assets/profile.jpg" alt="Ulysse Mizrahi" />
+          <span>Ulysse Mizrahi</span>
+        </a>
+        <div class="nav-links">
+          <a class="nav-item" href="../contact/index.html">Contact</a>
+          <a class="nav-item" href="index.html" aria-current="page">Research</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="research-layout">
+      <aside class="side-nav" aria-label="Research navigation">
+        <button class="project-toggle research-toggle" type="button" data-paper-id="index" aria-pressed="true">
+          <svg class="paper-icon" aria-hidden="true"><use href="#icon-index"></use></svg>
+          <span>Index</span>
+        </button>
+        <div class="side-group">
+          <p>Projects</p>
+          <button class="project-toggle" type="button" data-paper-id="actcam" aria-pressed="false">
+            <svg class="paper-icon" aria-hidden="true"><use href="#icon-video"></use></svg>
+            <span>ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation</span>
+          </button>
+          <button class="project-toggle" type="button" data-paper-id="image-editing-models" aria-pressed="false">
+            <svg class="paper-icon" aria-hidden="true"><use href="#icon-image"></use></svg>
+            <span>Image Editing Models are Numerical Simulators</span>
+          </button>
+          <button class="project-toggle" type="button" data-paper-id="elasticdino" aria-pressed="false">
+            <svg class="paper-icon" aria-hidden="true"><use href="#icon-mesh"></use></svg>
+            <span>ElasticDino: Dense Semantic Features using Elastic Deformation</span>
+          </button>
+          <button class="project-toggle" type="button" data-paper-id="max4zero" aria-pressed="false">
+            <svg class="paper-icon" aria-hidden="true"><use href="#icon-shirt"></use></svg>
+            <span>MaX4Zero: Masked Extended Attention for Zero-Shot Virtual Try-On In The Wild</span>
+          </button>
+        </div>
+      </aside>
+
+      <section class="research-content project-viewer pdf-viewer-shell" aria-live="polite">
+        <div class="pdf-intro" data-pdf-intro>
+          <div class="paper-index" aria-label="Paper index">
+            <button class="paper-index-item" type="button" data-paper-id="actcam" aria-pressed="false">
+              <svg class="paper-icon" aria-hidden="true"><use href="#icon-video"></use></svg>
+              <span>ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation</span>
+            </button>
+            <button class="paper-index-item" type="button" data-paper-id="image-editing-models" aria-pressed="false">
+              <svg class="paper-icon" aria-hidden="true"><use href="#icon-image"></use></svg>
+              <span>Image Editing Models are Numerical Simulators</span>
+            </button>
+            <button class="paper-index-item" type="button" data-paper-id="elasticdino" aria-pressed="false">
+              <svg class="paper-icon" aria-hidden="true"><use href="#icon-mesh"></use></svg>
+              <span>ElasticDino: Dense Semantic Features using Elastic Deformation</span>
+            </button>
+            <button class="paper-index-item" type="button" data-paper-id="max4zero" aria-pressed="false">
+              <svg class="paper-icon" aria-hidden="true"><use href="#icon-shirt"></use></svg>
+              <span>MaX4Zero: Masked Extended Attention for Zero-Shot Virtual Try-On In The Wild</span>
+            </button>
+          </div>
+        </div>
+
+        <article class="pdf-viewer" data-pdf-viewer hidden>
+          <header class="pdf-header">
+            <div>
+              <p class="eyebrow" data-pdf-kicker>Paper</p>
+              <h1 class="pdf-title" data-pdf-title></h1>
+              <p class="pdf-meta" data-pdf-meta></p>
+            </div>
+            <div class="pdf-actions">
+              <a class="pdf-link" data-pdf-open target="_blank" rel="noopener noreferrer">Open PDF</a>
+              <a class="pdf-link" data-pdf-download download>Download</a>
+            </div>
+          </header>
+
+          <div class="pdf-frame-wrap">
+            <iframe data-pdf-frame title="Paper PDF"></iframe>
+          </div>
+          <p class="pdf-message" data-pdf-message></p>
+        </article>
+      </section>
+    </main>
+
+  </body>
+</html>

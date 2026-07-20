@@ -1,0 +1,49 @@
+.contact-main {
+  min-height: calc(100vh - 67.5px);
+  padding: 40px 0;
+}
+
+.contact-content {
+  width: min(100%, 680px);
+}
+
+.contact-content h1 {
+  margin-bottom: 44px;
+  font-size: clamp(1.5rem, 3.5vw, 2.95rem);
+}
+
+.contact-content .contact-list {
+  gap: 0;
+}
+
+.contact-content .contact-row {
+  min-height: 84px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.1rem;
+}
+
+.contact-content .contact-row:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.contact-content .contact-value {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 840px) {
+  .contact-main {
+    padding: 28px 0;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .contact-content h1 {
+    margin-bottom: 32px;
+    font-size: 1.325rem;
+  }
+}
